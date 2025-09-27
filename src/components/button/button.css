@@ -1,0 +1,72 @@
+.btn {
+  overflow: hidden;
+  line-height: 1.4;
+  border-radius: 35px;
+  transition: all 0.25s ease-in-out;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  color: white;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 16px 32px 16px 64px;
+  color: var(--txt-color);
+}
+
+.btn-icon {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  bottom: 0;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+
+.btn-icon::before {
+  content: "";
+  position: absolute;
+  left: -180px;
+  height: 100%;
+  width: 200px;
+  background-color: var(--main-color);
+}
+
+.is-mouse .btn-text {
+  padding: 16px 64px 16px 32px;
+}
+
+.is-mouse .btn-icon {
+  animation-name: slide-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes slide-in {
+  100% {
+    left: calc(100% - 55px);
+  }
+}
+@keyframes slide-out {
+  0% {
+    left: calc(100% - 55px);
+  }
+  100% {
+    left: -1px;
+  }
+}

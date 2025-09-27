@@ -1,0 +1,26 @@
+.page-header {
+  align-items: center;
+  display: flex;  
+  justify-content: center;
+  padding: 5rem 0;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  color: var(--main-color);
+  font-size: 56px;
+  font-weight: 900;
+}
+
+.page-header h1 span {
+  color: var(--txt-color);
+}
+
+.page-header > span {
+  color: hsla(0, 0%, 100%, 0.07);
+  font-size: 110px;
+  font-weight: 800;
+  letter-spacing: 10px;
+  line-height: 0.7;
+  position: absolute;
+}
